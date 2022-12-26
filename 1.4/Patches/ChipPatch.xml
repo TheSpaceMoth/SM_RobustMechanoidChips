@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- SignalChip -->
+	
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "SignalChip"]/useHitPoints</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "SignalChip"]/useHitPoints</xpath>
+			<value>
+				<useHitPoints>false</useHitPoints>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "SignalChip"]</xpath>
+			<value>
+				<useHitPoints>false</useHitPoints>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "SignalChip"]/statBases/Flammability</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "SignalChip"]/statBases/Flammability</xpath>
+			<value>
+				<Flammability>0</Flammability>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "SignalChip"]/statBases</xpath>
+			<value>
+				<Flammability>0</Flammability>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "SignalChip"]/statBases/DeteriorationRate</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "SignalChip"]/statBases/DeteriorationRate</xpath>
+			<value>
+				<DeteriorationRate>0</DeteriorationRate>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "SignalChip"]/statBases</xpath>
+			<value>
+				<DeteriorationRate>0</DeteriorationRate>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- PowerfocusChip -->
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "PowerfocusChip"]/useHitPoints</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "PowerfocusChip"]/useHitPoints</xpath>
+			<value>
+				<useHitPoints>false</useHitPoints>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "PowerfocusChip"]</xpath>
+			<value>
+				<useHitPoints>false</useHitPoints>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "PowerfocusChip"]/statBases/Flammability</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "PowerfocusChip"]/statBases/Flammability</xpath>
+			<value>
+				<Flammability>0</Flammability>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "PowerfocusChip"]/statBases</xpath>
+			<value>
+				<Flammability>0</Flammability>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "PowerfocusChip"]/statBases/DeteriorationRate</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "PowerfocusChip"]/statBases/DeteriorationRate</xpath>
+			<value>
+				<DeteriorationRate>0</DeteriorationRate>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "PowerfocusChip"]/statBases</xpath>
+			<value>
+				<DeteriorationRate>0</DeteriorationRate>
+			</value>
+		</nomatch>
+	</Operation>
+		
+	<!-- NanostructuringChip -->
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "NanostructuringChip"]/useHitPoints</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "NanostructuringChip"]/useHitPoints</xpath>
+			<value>
+				<useHitPoints>false</useHitPoints>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "NanostructuringChip"]</xpath>
+			<value>
+				<useHitPoints>false</useHitPoints>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "NanostructuringChip"]/statBases/Flammability</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "NanostructuringChip"]/statBases/Flammability</xpath>
+			<value>
+				<Flammability>0</Flammability>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "NanostructuringChip"]/statBases</xpath>
+			<value>
+				<Flammability>0</Flammability>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "NanostructuringChip"]/statBases/DeteriorationRate</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "NanostructuringChip"]/statBases/DeteriorationRate</xpath>
+			<value>
+				<DeteriorationRate>0</DeteriorationRate>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "NanostructuringChip"]/statBases</xpath>
+			<value>
+				<DeteriorationRate>0</DeteriorationRate>
+			</value>
+		</nomatch>
+	</Operation>
+		
+</Patch>
