@@ -1,152 +1,116 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-	<!-- SignalChip -->
+	<!-- Mech Spawns -->
+	
+	<!--
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "Mech_Diabolus"]/killedLeavingsPlayerHostile</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName = "Mech_Diabolus"]/killedLeavingsPlayerHostile</xpath>
+		</match>
+	</Operation>-->
 	
 	<Operation  Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName = "SignalChip"]/useHitPoints</xpath>
+		<xpath>Defs/QuestScriptDef[defName = "Bossgroup"]/questContentRules/rulesStrings/li[starts-with(text(), "defeated")]</xpath>
 		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName = "SignalChip"]/useHitPoints</xpath>
+			<xpath>Defs/QuestScriptDef[defName = "Bossgroup"]/questContentRules/rulesStrings/li[starts-with(text(), "defeated")]</xpath>
 			<value>
-				<useHitPoints>false</useHitPoints>
+				<li>defeated->The hostile [escortees0_label] has been defeated and contains a [reward_label]! Shread or Smash it to get it!</li>
 			</value>
 		</match>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName = "SignalChip"]</xpath>
-			<value>
-				<useHitPoints>false</useHitPoints>
-			</value>
-		</nomatch>
 	</Operation>
 	
 	<Operation  Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName = "SignalChip"]/statBases/Flammability</xpath>
+		<xpath>Defs/ThingDef[defName = "Mech_Diabolus"]/killedLeavingsPlayerHostile</xpath>
 		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName = "SignalChip"]/statBases/Flammability</xpath>
+			<xpath>Defs/ThingDef[defName = "Mech_Diabolus"]/killedLeavingsPlayerHostile</xpath>
 			<value>
-				<Flammability>0</Flammability>
+				<killedLeavingsPlayerHostile>
+					<Spark>1</Spark>
+				</killedLeavingsPlayerHostile>
 			</value>
 		</match>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName = "SignalChip"]/statBases</xpath>
-			<value>
-				<Flammability>0</Flammability>
-			</value>
-		</nomatch>
 	</Operation>
 	
 	<Operation  Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName = "SignalChip"]/statBases/DeteriorationRate</xpath>
+		<xpath>Defs/ThingDef[defName = "Mech_Warqueen"]/killedLeavingsPlayerHostile</xpath>
 		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName = "SignalChip"]/statBases/DeteriorationRate</xpath>
+			<xpath>Defs/ThingDef[defName = "Mech_Warqueen"]/killedLeavingsPlayerHostile</xpath>
 			<value>
-				<DeteriorationRate>0</DeteriorationRate>
+				<killedLeavingsPlayerHostile>
+					<Spark>1</Spark>
+				</killedLeavingsPlayerHostile>
 			</value>
 		</match>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName = "SignalChip"]/statBases</xpath>
-			<value>
-				<DeteriorationRate>0</DeteriorationRate>
-			</value>
-		</nomatch>
-	</Operation>
-	
-	<!-- PowerfocusChip -->
-	<Operation  Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName = "PowerfocusChip"]/useHitPoints</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName = "PowerfocusChip"]/useHitPoints</xpath>
-			<value>
-				<useHitPoints>false</useHitPoints>
-			</value>
-		</match>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName = "PowerfocusChip"]</xpath>
-			<value>
-				<useHitPoints>false</useHitPoints>
-			</value>
-		</nomatch>
 	</Operation>
 	
 	<Operation  Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName = "PowerfocusChip"]/statBases/Flammability</xpath>
+		<xpath>Defs/ThingDef[defName = "Mech_Apocriton"]/killedLeavingsPlayerHostile</xpath>
 		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName = "PowerfocusChip"]/statBases/Flammability</xpath>
+			<xpath>Defs/ThingDef[defName = "Mech_Apocriton"]/killedLeavingsPlayerHostile</xpath>
 			<value>
-				<Flammability>0</Flammability>
+				<killedLeavingsPlayerHostile>
+					<Spark>1</Spark>
+				</killedLeavingsPlayerHostile>
+			</value>
+		</match>
+	</Operation>
+	
+	<!-- Shreading Loot -->
+	
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "Mech_Diabolus"]/butcherProducts</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "Mech_Diabolus"]/butcherProducts</xpath>
+			<value>
+				<SignalChip>1</SignalChip>
 			</value>
 		</match>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName = "PowerfocusChip"]/statBases</xpath>
+			<xpath>Defs/ThingDef[defName = "Mech_Diabolus"]</xpath>
 			<value>
-				<Flammability>0</Flammability>
+				<butcherProducts>
+					<SignalChip>1</SignalChip>
+				</butcherProducts>
 			</value>
 		</nomatch>
 	</Operation>
 	
 	<Operation  Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName = "PowerfocusChip"]/statBases/DeteriorationRate</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName = "PowerfocusChip"]/statBases/DeteriorationRate</xpath>
+		<xpath>Defs/ThingDef[defName = "Mech_Warqueen"]/butcherProducts</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "Mech_Warqueen"]/butcherProducts</xpath>
 			<value>
-				<DeteriorationRate>0</DeteriorationRate>
+				<PowerfocusChip>1</PowerfocusChip>
 			</value>
 		</match>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName = "PowerfocusChip"]/statBases</xpath>
+			<xpath>Defs/ThingDef[defName = "Mech_Warqueen"]</xpath>
 			<value>
-				<DeteriorationRate>0</DeteriorationRate>
-			</value>
-		</nomatch>
-	</Operation>
-		
-	<!-- NanostructuringChip -->
-	<Operation  Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName = "NanostructuringChip"]/useHitPoints</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName = "NanostructuringChip"]/useHitPoints</xpath>
-			<value>
-				<useHitPoints>false</useHitPoints>
-			</value>
-		</match>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName = "NanostructuringChip"]</xpath>
-			<value>
-				<useHitPoints>false</useHitPoints>
+				<butcherProducts>
+					<PowerfocusChip>1</PowerfocusChip>
+				</butcherProducts>
 			</value>
 		</nomatch>
 	</Operation>
 	
 	<Operation  Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName = "NanostructuringChip"]/statBases/Flammability</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName = "NanostructuringChip"]/statBases/Flammability</xpath>
+		<xpath>Defs/ThingDef[defName = "Mech_Apocriton"]/butcherProducts</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "Mech_Apocriton"]/butcherProducts</xpath>
 			<value>
-				<Flammability>0</Flammability>
+				<NanostructuringChip>1</NanostructuringChip>
 			</value>
 		</match>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName = "NanostructuringChip"]/statBases</xpath>
+			<xpath>Defs/ThingDef[defName = "Mech_Apocriton"]</xpath>
 			<value>
-				<Flammability>0</Flammability>
+				<butcherProducts>
+					<NanostructuringChip>1</NanostructuringChip>
+				</butcherProducts>
 			</value>
 		</nomatch>
 	</Operation>
 	
-	<Operation  Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName = "NanostructuringChip"]/statBases/DeteriorationRate</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[defName = "NanostructuringChip"]/statBases/DeteriorationRate</xpath>
-			<value>
-				<DeteriorationRate>0</DeteriorationRate>
-			</value>
-		</match>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName = "NanostructuringChip"]/statBases</xpath>
-			<value>
-				<DeteriorationRate>0</DeteriorationRate>
-			</value>
-		</nomatch>
-	</Operation>
-		
 </Patch>

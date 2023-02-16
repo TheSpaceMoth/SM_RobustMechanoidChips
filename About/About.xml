@@ -4,17 +4,25 @@
   <author>SpaceMoth</author>
   <url></url>
   <packageId>Spacemoth.RobustMChips</packageId>
-  <description>This is a tweak to the Signal Chip, Powerfocus Chip and Nanostructuring Chips dropped by boss mechanoids to make them immune to damage and fire, to stop them being destroyed by any excessive force used to take down the mechanoids carrying them.</description>
+  <description>This is change to the spawning of the Signal Chip, Powerfocus Chip and Nanostructuring Chips dropped by boss mechanoids. Instead of ejecting from the boss on death, you will instead need to break it out of them using either the crafting spot smash mechanoid bill or the macheining shreadding mechanoid.</description>
   <supportedVersions>
     <li>1.4</li>
   </supportedVersions>
     <modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<downloadUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</downloadUrl>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+		</li>
 		<li>
 		  <packageId>Ludeon.RimWorld.Biotech</packageId>
 		  <displayName>Biotech</displayName>
 		</li>
     </modDependencies>
     <loadAfter>
+		<li>brrainz.harmony</li>
         <li>Ludeon.RimWorld.Biotech</li>
+		<li>RelaxedOtter.BetterMechanoidLoot</li>
     </loadAfter>
 </ModMetaData>

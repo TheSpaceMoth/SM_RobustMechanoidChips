@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <LetterCommsConsoleSpawned>A mechanitor can use the {PARENT_label} to summon a dangerous and hostile {LEADER_label} mechanoid. Be prepared, {LEADER_label} mechanoids are extremely powerful.\n\nIf you defeat the {LEADER_label}, you can smash or shread it for the following items:\n\n{REWARDSLIST}</LetterCommsConsoleSpawned>
+
+  <LetterBossgroupCallerUnlocked>You can now build a {PARENT_label} which a mechanitor can use to summon a {LEADER_label}. If you defeat the {LEADER_label}, you can smash or shread it for the following items:\n\n{REWARDSLIST}</LetterBossgroupCallerUnlocked>
+
+</LanguageData>
