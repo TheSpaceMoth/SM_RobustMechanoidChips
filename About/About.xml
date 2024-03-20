@@ -7,6 +7,7 @@
   <description>This is change to the spawning of the Signal Chip, Powerfocus Chip and Nanostructuring Chips dropped by boss mechanoids. Instead of ejecting from the boss on death, you will instead need to break it out of them using either the crafting spot smash mechanoid bill or the macheining shreadding mechanoid.</description>
   <supportedVersions>
     <li>1.4</li>
+    <li>1.5</li>
   </supportedVersions>
     <modDependencies>
 		<li>
@@ -24,5 +25,6 @@
 		<li>brrainz.harmony</li>
         <li>Ludeon.RimWorld.Biotech</li>
 		<li>RelaxedOtter.BetterMechanoidLoot</li>
+		<li>sarg.alphamechs</li>
     </loadAfter>
 </ModMetaData>

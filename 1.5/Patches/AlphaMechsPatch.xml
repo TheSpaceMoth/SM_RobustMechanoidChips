@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Mech Spawns -->
+	
+	<!--
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "Mech_Diabolus"]/killedLeavingsPlayerHostile</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName = "Mech_Diabolus"]/killedLeavingsPlayerHostile</xpath>
+		</match>
+	</Operation>-->
+	<Operation Class="PatchOperationFindMod">
+	  <mods>
+		<li>Alpha Mechs</li>
+	  </mods>
+	  <match Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "AM_Infernus"]/killedLeavingsPlayerHostile</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "AM_Infernus"]/killedLeavingsPlayerHostile</xpath>
+			<value>
+				<killedLeavingsPlayerHostile>
+					<Spark>1</Spark>
+				</killedLeavingsPlayerHostile>
+			</value>
+		</match>
+	  </match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+	  <mods>
+		<li>Alpha Mechs</li>
+	  </mods>
+	  <match Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "AM_WarEmpress"]/killedLeavingsPlayerHostile</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "AM_WarEmpress"]/killedLeavingsPlayerHostile</xpath>
+			<value>
+				<killedLeavingsPlayerHostile>
+					<Spark>1</Spark>
+				</killedLeavingsPlayerHostile>
+			</value>
+		</match>
+	  </match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+	  <mods>
+		<li>Alpha Mechs</li>
+	  </mods>
+	  <match Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "AM_Apoptosis"]/killedLeavingsPlayerHostile</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "AM_Apoptosis"]/killedLeavingsPlayerHostile</xpath>
+			<value>
+				<killedLeavingsPlayerHostile>
+					<Spark>1</Spark>
+				</killedLeavingsPlayerHostile>
+			</value>
+		</match>
+	  </match>
+	</Operation>
+	
+	
+	<!-- Shreading Loot -->
+	
+	<Operation Class="PatchOperationFindMod">
+	  <mods>
+		<li>Alpha Mechs</li>
+	  </mods>
+	  <match Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "AM_Infernus"]/butcherProducts</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "AM_Infernus"]/butcherProducts</xpath>
+			<value>
+				<AM_HyperLinkageChip>1</AM_HyperLinkageChip>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "AM_Infernus"]</xpath>
+			<value>
+				<butcherProducts>
+					<AM_HyperLinkageChip>1</AM_HyperLinkageChip>
+				</butcherProducts>
+			</value>
+		</nomatch>
+	  </match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+	  <mods>
+		<li>Alpha Mechs</li>
+	  </mods>
+	  <match Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "AM_WarEmpress"]/butcherProducts</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "AM_WarEmpress"]/butcherProducts</xpath>
+			<value>
+				<AM_StellarProcessingChip>1</AM_StellarProcessingChip>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "AM_WarEmpress"]</xpath>
+			<value>
+				<butcherProducts>
+					<AM_StellarProcessingChip>1</AM_StellarProcessingChip>
+				</butcherProducts>
+			</value>
+		</nomatch>
+	  </match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+	  <mods>
+		<li>Alpha Mechs</li>
+	  </mods>
+	  <match Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "AM_Apoptosis"]/butcherProducts</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "AM_Apoptosis"]/butcherProducts</xpath>
+			<value>
+				<AM_QuantumMatrixChip>1</AM_QuantumMatrixChip>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "AM_Apoptosis"]</xpath>
+			<value>
+				<butcherProducts>
+					<AM_QuantumMatrixChip>1</AM_QuantumMatrixChip>
+				</butcherProducts>
+			</value>
+		</nomatch>
+	  </match>
+	</Operation>
+	
+</Patch>

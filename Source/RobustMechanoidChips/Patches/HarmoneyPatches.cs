@@ -54,7 +54,17 @@ namespace RobustMechanoidChips
                         butcherThing.stackCount = butcherProduct.count; // Do not reduce based on effeciency for these items.
                         RetEnum.Add(butcherThing);
                     }
-                    else
+					// Same for Alpha Mechs
+					else if ((butcherProduct.thingDef.defName == "AM_HyperLinkageChip") ||
+						(butcherProduct.thingDef.defName == "AM_StellarProcessingChip") ||
+						(butcherProduct.thingDef.defName == "AM_QuantumMatrixChip"))
+					{
+						RetVal = false; // We dont want to run the old code
+
+						butcherThing.stackCount = butcherProduct.count; // Do not reduce based on effeciency for these items.
+						RetEnum.Add(butcherThing);
+					}
+					else
                     {
                         int num = GenMath.RoundRandom((float)butcherProduct.count * efficiency);
                         if (num > 0)
