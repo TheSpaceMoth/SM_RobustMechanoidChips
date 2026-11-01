@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Mech Spawns -->
+	
+	<!--
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "Mech_Diabolus"]/killedLeavingsPlayerHostile</xpath>
+		<match Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName = "Mech_Diabolus"]/killedLeavingsPlayerHostile</xpath>
+		</match>
+	</Operation>-->
+	
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/QuestScriptDef[defName = "Bossgroup"]/questContentRules/rulesStrings/li[starts-with(text(), "defeated")]</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/QuestScriptDef[defName = "Bossgroup"]/questContentRules/rulesStrings/li[starts-with(text(), "defeated")]</xpath>
+			<value>
+				<li>defeated->The hostile [escortees0_label] has been defeated and contains a [reward_label]! Shread or Smash it to get it!</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "Mech_Diabolus"]/killedLeavingsPlayerHostile</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "Mech_Diabolus"]/killedLeavingsPlayerHostile</xpath>
+			<value>
+				<killedLeavingsPlayerHostile>
+					<Spark>1</Spark>
+				</killedLeavingsPlayerHostile>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "Mech_Warqueen"]/killedLeavingsPlayerHostile</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "Mech_Warqueen"]/killedLeavingsPlayerHostile</xpath>
+			<value>
+				<killedLeavingsPlayerHostile>
+					<Spark>1</Spark>
+				</killedLeavingsPlayerHostile>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "Mech_Apocriton"]/killedLeavingsPlayerHostile</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName = "Mech_Apocriton"]/killedLeavingsPlayerHostile</xpath>
+			<value>
+				<killedLeavingsPlayerHostile>
+					<Spark>1</Spark>
+				</killedLeavingsPlayerHostile>
+			</value>
+		</match>
+	</Operation>
+	
+	<!-- Shreading Loot -->
+	
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "Mech_Diabolus"]/butcherProducts</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "Mech_Diabolus"]/butcherProducts</xpath>
+			<value>
+				<SignalChip>1</SignalChip>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "Mech_Diabolus"]</xpath>
+			<value>
+				<butcherProducts>
+					<SignalChip>1</SignalChip>
+				</butcherProducts>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "Mech_Warqueen"]/butcherProducts</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "Mech_Warqueen"]/butcherProducts</xpath>
+			<value>
+				<PowerfocusChip>1</PowerfocusChip>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "Mech_Warqueen"]</xpath>
+			<value>
+				<butcherProducts>
+					<PowerfocusChip>1</PowerfocusChip>
+				</butcherProducts>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation  Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "Mech_Apocriton"]/butcherProducts</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "Mech_Apocriton"]/butcherProducts</xpath>
+			<value>
+				<NanostructuringChip>1</NanostructuringChip>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "Mech_Apocriton"]</xpath>
+			<value>
+				<butcherProducts>
+					<NanostructuringChip>1</NanostructuringChip>
+				</butcherProducts>
+			</value>
+		</nomatch>
+	</Operation>
+	
+</Patch>
